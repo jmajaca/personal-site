@@ -1,2 +1,26 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+    import Section from "$lib/section/Section.svelte";
+    import type { SectionProps } from "$lib/section/Types"
+
+    let props: SectionProps = {
+        location: {
+            city: "Zagreb",
+            country: "Croatia"
+        },
+        title: "Work",
+        url: "https://google.com",
+        items: [
+            {
+                description: "desc",
+                duration: {
+                    start: "2010",
+                    finish: "2020",
+                },
+                title: "role"
+            }
+        ]
+    }
+</script>
+
+
+<Section props={props}/>
